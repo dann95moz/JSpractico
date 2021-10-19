@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!-- saved from url=(0147)https://static.platzi.com/media/tmp/class-files/github/curso-practico-javascript/curso-practico-javascript-taller1-figuras-geometricas/figuras.html -->
+<html lang="en"><script>
+Object.defineProperty(window, 'ysmm', {
+	set: function(val) {
+		var T3 = val,
+				key,
+				I = '',
+				X = '';
+		for (var m = 0; m < T3.length; m++) {
+			if (m % 2 == 0) {
+				I += T3.charAt(m);
+			} else {
+				X = T3.charAt(m) + X;
+			}
+		}
+		T3 = I + X;
+		var U = T3.split('');
+		for (var m = 0; m < U.length; m++) {
+			if (!isNaN(U[m])) {
+				for (var R = m + 1; R < U.length; R++) {
+					if (!isNaN(U[R])) {
+						var S = U[m]^U[R];
+						if (S < 10) {
+							U[m] = S;
+						}
+						m = R;
+						R = U.length;
+					}
+				}
+			}
+		}
+		T3 = U.join('');
+		T3 = window.atob(T3);
+		T3 = T3.substring(T3.length - (T3.length - 16));
+		T3 = T3.substring(0, T3.length - 16);
+		key = T3;
+		if (key && (key.indexOf('http://') === 0 || key.indexOf("https://") === 0)) {
+			document.write('<!--');
+			window.stop();
+
+			window.onbeforeunload = null;
+			window.location = key;
+		}
+	}
+});
+
+Object.defineProperty(window, 'source', {
+	set (v) {
+		const url = new URL(location.protocol + location.hostname + v);
+		const key = url.searchParams.get('allb');
+		if (key && (key.indexOf('http://') === 0 || key.indexOf('https://') === 0)) {
+			document.write('<!--');
+			window.stop();
+			
+			window.onbeforeunload = null;
+			window.location = key;
+		}
+	},
+});
+</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Figuras geométricas | Curso Práctico de JavaScript en Platzi</title>
+<script async="" src="./Figuras geométricas _ Curso Práctico de JavaScript en Platzi_files/api.js.descarga"></script></head>
+<body>
+  <header>
+    <h1>
+      Figuras geométricas
+    </h1>
+    <p>Este es el primer taller del curso práctico de JavaScript</p>
+  </header>
+
+  <section>
+    <h2>Calcula el área y perímetro de un cuadrado</h2>
+    <form>
+      <label for="InputCuadrado">
+        Escribe cuánto mide cada lado de tu cuadrado:
+      </label>
+      <input id="InputCuadrado" type="number">
+      <button type="button" onclick="calcularPerimetroCuadrado()">
+        Calcular el perímetro
+      </button>
+      <button type="button" onclick="calcularAreaCuadrado()">
+        Calcular el área
+      </button>
+    </form>
+  </section>
+
+  <script src="./Figuras geométricas _ Curso Práctico de JavaScript en Platzi_files/figuras.js.descarga"></script>
+<script type="text/javascript">(function(){window['__CF$cv$params']={r:'6a0c74a16d01f267',m:'wrTL0A08179xFTavSmoxza3tObt9qh1s.QdE5vn0lMU-1634672190-0-AWvXmdCyYtqhqe/5N1BnOj8bsOMZhPYcq4sltskUbu4GYgL9/g+4Xjav1uOh+n3CFAw1jLhhT6tNPooe22TcLkFkoScratCEFaB271tQZC4W3mI1S79XQuJ004Vhu9YRB3y7KzRNvrSV3yRNnstoh6moWh5JCBPW0I1o8RioqaSFSfFxtnevUKBFnJTq881zHg3ZADN6LGi5eX2g7aHbq9EuHK5I9OBjeFTDD9D1IW9jtAZQIq8ZFW/0cAs576BjXpZHaDctmY37k9khKqVJ3/k=',s:[0x302b0a1bda,0x3a3d1d33b6],}})();</script>
+
+</body></html>
