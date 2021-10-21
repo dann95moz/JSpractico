@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+    <h1>
+        Altura triangulo
+    </h1>
+    <p>Este código encuentra la altura de un triangulo isosceles</p>
+</header>
+<section>
+    <form>
+
+
+    <label for = "Lado1">
+        Ingresa el valor de cada lado <br><br>
+    </label>
+ <p id = "alturatriangulo"></p>
+ <label>ingresa la hipotenusa</label><br><br>
+<input id="lado1"type ="number"/> 
+<input id="lado2"type="number"/>
+<input id="lado3"type="number"/>
+<button type="button" onclick="myFunction()">Calcular</button>
+</form>
+</section>
+
+   
+    <script> 
+    function myFunction(){
+
+        var lado1Int=parseInt(document.getElementById("lado1").value);
+        var lado2Int=parseInt(document.getElementById("lado2").value);
+        var lado3Int=parseInt(document.getElementById("lado3").value);
+        if (lado1Int===lado2Int || lado2Int=== lado3Int || lado3Int === lado1Int) {
+            var h= Math.sqrt((lado1Int*lado1Int)-(lado2Int**2/4));
+            alert(h);
+        } else {
+            alert("Este no es un triangulo isoceles");
+        }
+        
+     
+        
+       
+    }</script>
+</body>
+</html>
